@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/fnando/browser.git
+  revision: cbf1f17913564de84be78e1120156f818dfe3aa9
+  specs:
+    browser (0.7.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -13,4 +19,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  browser!
   unicorn

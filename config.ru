@@ -1,3 +1,2 @@
-run -> env {
-  [200, {'Content-Type' => 'text/plain'}, [env['HTTP_USER_AGENT']]]
-}
+require File.expand_path('../page', __FILE__)
+run -> env { Page.new(env).to_rack }
