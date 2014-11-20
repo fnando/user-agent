@@ -128,7 +128,9 @@
   <ul class="columnize">
     <%= list_item 'console', browser.console? %>
     <%= list_item 'xbox', browser.xbox? %>
+    <%= list_item 'xbox_one', browser.xbox_one? %>
     <%= list_item 'playstation', browser.playstation? %>
+    <%= list_item 'playstation4', browser.playstation4? %>
     <%= list_item 'nintendo', browser.nintendo? %>
     <%= list_item 'psp', browser.psp? %>
     <%= list_item 'psp_vita', browser.psp_vita? %>
@@ -159,11 +161,14 @@
     <%= list_item 'windows_x64', browser.windows_x64? %>
     <%= list_item 'chrome_os', browser.chrome_os? %>
     <%= list_item 'tv', browser.tv? %>
+    <%= list_item 'adobe_air', browser.adobe_air? %>
   </ul>
 
   <h2>Other</h2>
   <ul class="columnize">
+    <%= list_item 'known', browser.known? %>
     <%= list_item 'bot', browser.bot? %>
+    <%= list_item 'bot_name', browser.bot_name %>
     <%= list_item 'search_engine', browser.search_engine? %>
     <%= list_item 'accept_language', browser.accept_language %>
   </ul>

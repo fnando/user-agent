@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/fnando/browser.git
-  revision: cbf1f17913564de84be78e1120156f818dfe3aa9
+  revision: 98e79ea023dd022ed676372561b9f39ca3b97946
   specs:
     browser (0.7.2)
 

@@ -19,6 +19,8 @@ class Page
   def default_value(value, default_value)
     if value.kind_of?(String) && value.empty?
       default_value
+    elsif value.nil?
+      default_value
     else
       value.inspect
     end
