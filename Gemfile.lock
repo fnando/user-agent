@@ -1,8 +1,9 @@
 GIT
   remote: git://github.com/fnando/browser.git
-  revision: 98e79ea023dd022ed676372561b9f39ca3b97946
+  revision: 6d5bbd05f84583c7c14ee587435aca325d9a0bc7
+  branch: master
   specs:
-    browser (0.7.2)
+    browser (0.8.0)
 
 GEM
   remote: https://rubygems.org/
