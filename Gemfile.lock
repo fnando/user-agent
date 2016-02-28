@@ -1,16 +1,16 @@
 GIT
   remote: git://github.com/fnando/browser.git
-  revision: 98e79ea023dd022ed676372561b9f39ca3b97946
+  revision: 3dea7905fab9183bee8847b91feb9a585e6de470
   specs:
-    browser (0.7.2)
+    browser (2.0.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    kgio (2.9.2)
-    rack (1.5.2)
-    raindrops (0.13.0)
-    unicorn (4.8.3)
+    kgio (2.10.0)
+    rack (1.6.4)
+    raindrops (0.15.0)
+    unicorn (5.0.1)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
@@ -21,3 +21,6 @@ PLATFORMS
 DEPENDENCIES
   browser!
   unicorn
+
+BUNDLED WITH
+   1.11.2

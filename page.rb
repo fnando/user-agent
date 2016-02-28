@@ -1,7 +1,7 @@
-require 'bundler/setup'
-require 'browser'
-require 'rack'
-require 'erb'
+require "bundler/setup"
+require "browser"
+require "rack"
+require "erb"
 
 class Page
   attr_reader :env, :request, :browser, :template
@@ -10,10 +10,10 @@ class Page
     @env = env
     @request = Rack::Request.new(env)
     @browser = Browser.new(
-      ua: request.params['ua'],
-      accept_language: request.params['accept_language']
+      request.params["ua"],
+      accept_language: request.params["accept_language"]
     )
-    @template = template = File.read(File.expand_path('../index.erb', __FILE__))
+    @template = File.read(File.expand_path("../index.erb", __FILE__))
   end
 
   def default_value(value, default_value)
@@ -26,7 +26,7 @@ class Page
     end
   end
 
-  def list_item(label, value, default = '[not detected]')
+  def list_item(label, value, default = "[not detected]")
     value = default_value(value, default)
 
     <<-HTML
@@ -42,13 +42,13 @@ class Page
   end
 
   def to_rack
-    if request.params.key?('ua')
-      [200, {'Content-Type' => 'text/html'}, [to_html]]
+    if request.params.key?("ua")
+      [200, {"Content-Type" => "text/html"}, [to_html]]
     else
-      location = "/?" << URI.encode_www_form(ua: env['HTTP_USER_AGENT'], accept_language: env['HTTP_ACCEPT_LANGUAGE'])
+      location = "/?" << URI.encode_www_form(ua: env["HTTP_USER_AGENT"], accept_language: env["HTTP_ACCEPT_LANGUAGE"])
       [
         301,
-        {'Content-Type' => 'text/html', 'Location' => location},
+        {"Content-Type" => "text/html", "Location" => location},
         [%[You were redirected to <a href="#{location}">#{location}</a>]]
       ]
     end

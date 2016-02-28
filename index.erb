@@ -92,85 +92,95 @@
     <%= list_item 'core_media', browser.core_media? %>
     <%= list_item 'firefox', browser.firefox? %>
     <%= list_item 'ie', browser.ie? %>
-    <%= list_item 'ie6', browser.ie6? %>
-    <%= list_item 'ie7', browser.ie7? %>
-    <%= list_item 'ie8', browser.ie8? %>
-    <%= list_item 'ie9', browser.ie9? %>
-    <%= list_item 'ie10', browser.ie10? %>
-    <%= list_item 'ie11', browser.ie11? %>
+    <%= list_item 'ie6', browser.ie?(6) %>
+    <%= list_item 'ie7', browser.ie?(7) %>
+    <%= list_item 'ie8', browser.ie?(8) %>
+    <%= list_item 'ie9', browser.ie?(9) %>
+    <%= list_item 'ie10', browser.ie?(10) %>
+    <%= list_item 'ie11', browser.ie?(11) %>
     <%= list_item 'ie compatibility_view', browser.compatibility_view? %>
     <%= list_item 'opera', browser.opera? %>
     <%= list_item 'phantom_js', browser.phantom_js? %>
     <%= list_item 'quicktime', browser.quicktime? %>
     <%= list_item 'safari', browser.safari? %>
     <%= list_item 'safari_webapp_mode', browser.safari_webapp_mode? %>
-    <%= list_item 'silk', browser.silk? %>
     <%= list_item 'webkit', browser.webkit? %>
-    <%= list_item 'meta', browser.meta %>
-  </ul>
-
-  <h2>Devices</h2>
-  <ul class="columnize">
-    <%= list_item 'mobile', browser.mobile? %>
-    <%= list_item 'tablet', browser.tablet? %>
-    <%= list_item 'iphone', browser.iphone? %>
-    <%= list_item 'ipad', browser.ipad? %>
-    <%= list_item 'ipod', browser.ipod? %>
-    <%= list_item 'surface', browser.surface? %>
-    <%= list_item 'kindle', browser.kindle? %>
-    <%= list_item 'playbook', browser.playbook? %>
-    <%= list_item 'windows_touchscreen_desktop', browser.windows_touchscreen_desktop? %>
     <%= list_item 'opera_mini', browser.opera_mini? %>
-    <%= list_item 'blackberry', browser.blackberry? %>
-  </ul>
-
-  <h2>Console</h2>
-  <ul class="columnize">
-    <%= list_item 'console', browser.console? %>
-    <%= list_item 'xbox', browser.xbox? %>
-    <%= list_item 'xbox_one', browser.xbox_one? %>
-    <%= list_item 'playstation', browser.playstation? %>
-    <%= list_item 'playstation4', browser.playstation4? %>
-    <%= list_item 'nintendo', browser.nintendo? %>
-    <%= list_item 'psp', browser.psp? %>
-    <%= list_item 'psp_vita', browser.psp_vita? %>
+    <%= list_item 'meta', browser.meta %>
   </ul>
 
   <h2>Platform</h2>
   <ul class="columnize">
-    <%= list_item 'android', browser.android? %>
-    <%= list_item 'ios', browser.ios? %>
-    <%= list_item 'ios4', browser.ios4? %>
-    <%= list_item 'ios5', browser.ios5? %>
-    <%= list_item 'ios6', browser.ios6? %>
-    <%= list_item 'ios7', browser.ios7? %>
-    <%= list_item 'ios8', browser.ios8? %>
-    <%= list_item 'blackberry4', browser.blackberry4? %>
-    <%= list_item 'blackberry5', browser.blackberry5? %>
-    <%= list_item 'blackberry6', browser.blackberry6? %>
-    <%= list_item 'blackberry7', browser.blackberry7? %>
-    <%= list_item 'blackberry10', browser.blackberry10? %>
-    <%= list_item 'platform', browser.platform %>
-    <%= list_item 'mac', browser.mac? %>
-    <%= list_item 'windows', browser.windows? %>
-    <%= list_item 'windows8', browser.windows8? %>
-    <%= list_item 'windows_rt', browser.windows_rt? %>
-    <%= list_item 'linux', browser.linux? %>
-    <%= list_item 'windows_mobile', browser.windows_mobile? %>
-    <%= list_item 'windows_phone', browser.windows_phone? %>
-    <%= list_item 'windows_x64', browser.windows_x64? %>
-    <%= list_item 'chrome_os', browser.chrome_os? %>
-    <%= list_item 'tv', browser.tv? %>
-    <%= list_item 'adobe_air', browser.adobe_air? %>
+    <%= list_item 'blackberry', browser.platform.blackberry? %>
+  </ul>
+
+  <h2>Devices</h2>
+  <ul class="columnize">
+    <%= list_item 'mobile', browser.device.mobile? %>
+    <%= list_item 'tablet', browser.device.tablet? %>
+    <%= list_item 'iphone', browser.device.iphone? %>
+    <%= list_item 'ipad', browser.device.ipad? %>
+    <%= list_item 'ipod', browser.device.ipod? %>
+    <%= list_item 'surface', browser.device.surface? %>
+    <%= list_item 'kindle', browser.device.kindle? %>
+    <%= list_item 'playbook', browser.device.playbook? %>
+    <%= list_item 'silk', browser.device.silk? %>
+    <%= list_item 'tv', browser.device.tv? %>
+  </ul>
+
+  <h2>Console</h2>
+  <ul class="columnize">
+    <%= list_item 'console', browser.device.console? %>
+    <%= list_item 'xbox', browser.device.xbox? %>
+    <%= list_item 'xbox_one', browser.device.xbox_one? %>
+    <%= list_item 'playstation', browser.device.playstation? %>
+    <%= list_item 'playstation4', browser.device.playstation4? %>
+    <%= list_item 'nintendo', browser.device.nintendo? %>
+    <%= list_item 'psp', browser.device.psp? %>
+    <%= list_item 'psp_vita', browser.device.psp_vita? %>
+  </ul>
+
+  <h2>Platform</h2>
+  <ul class="columnize">
+    <%= list_item 'android', browser.platform.android? %>
+    <%= list_item 'ios', browser.platform.ios? %>
+    <%= list_item 'ios4', browser.platform.ios?(4) %>
+    <%= list_item 'ios5', browser.platform.ios?(5) %>
+    <%= list_item 'ios6', browser.platform.ios?(6) %>
+    <%= list_item 'ios7', browser.platform.ios?(7) %>
+    <%= list_item 'ios8', browser.platform.ios?(8) %>
+    <%= list_item 'blackberry4', browser.platform.blackberry?(4) %>
+    <%= list_item 'blackberry5', browser.platform.blackberry?(5) %>
+    <%= list_item 'blackberry6', browser.platform.blackberry?(6) %>
+    <%= list_item 'blackberry7', browser.platform.blackberry?(7) %>
+    <%= list_item 'blackberry10', browser.platform.blackberry?(10) %>
+    <%= list_item 'platform id', browser.platform.id %>
+    <%= list_item 'platform name', browser.platform.name %>
+    <%= list_item 'mac', browser.platform.mac? %>
+    <%= list_item 'windows', browser.platform.windows? %>
+    <%= list_item 'windows8', browser.platform.windows8? %>
+    <%= list_item 'windows_rt', browser.platform.windows_rt? %>
+    <%= list_item 'linux', browser.platform.linux? %>
+    <%= list_item 'windows_mobile', browser.platform.windows_mobile? %>
+    <%= list_item 'windows_phone', browser.platform.windows_phone? %>
+    <%= list_item 'windows_x64', browser.platform.windows_x64? %>
+    <%= list_item 'chrome_os', browser.platform.chrome_os? %>
+    <%= list_item 'adobe_air', browser.platform.adobe_air? %>
   </ul>
 
   <h2>Other</h2>
   <ul class="columnize">
     <%= list_item 'known', browser.known? %>
     <%= list_item 'bot', browser.bot? %>
-    <%= list_item 'bot_name', browser.bot_name %>
-    <%= list_item 'search_engine', browser.search_engine? %>
-    <%= list_item 'accept_language', browser.accept_language %>
+    <%= list_item 'bot name', browser.bot.name %>
+    <%= list_item 'search_engine', browser.bot.search_engine? %>
+  </ul>
+
+  <h2>Accept Language</h2>
+  <ul class="columnize">
+    <% for lang in browser.accept_language %>
+      <%= list_item lang.name, [lang.code, lang.full, lang.quality]  %>
+    <% end %>
   </ul>
 </body>
 </html>
