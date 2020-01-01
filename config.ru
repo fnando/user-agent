@@ -1,2 +1,5 @@
-require File.expand_path("../page", __FILE__)
-run -> env { Page.new(env).to_rack }
+# frozen_string_literal: true
+
+require File.expand_path("setup", __dir__)
+
+run Sinatra::Application
