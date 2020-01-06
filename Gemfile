@@ -10,6 +10,7 @@ gem "rouge"
 gem "sinatra"
 
 group :development do
+  gem "pry-meta"
   gem "rubocop"
   gem "rubocop-fnando"
   gem "shotgun"
