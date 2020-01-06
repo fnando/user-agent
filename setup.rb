@@ -31,7 +31,7 @@ helpers do
 end
 
 get "/" do
-  redirect to("/?ua=#{CGI.escape(accept_language)}") unless params[:ua]
+  redirect to("/?ua=#{CGI.escape(user_agent)}") unless params[:ua]
 
   erb :report
 end
