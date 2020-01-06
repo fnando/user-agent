@@ -54,5 +54,5 @@ end
 get "/json" do
   content_type :json
 
-  Report.new(user_agent, accept_language).to_json
+  Report.new(user_agent_param, accept_language_param).to_json
 end
