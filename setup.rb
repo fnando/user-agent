@@ -38,6 +38,10 @@ helpers do
   def report
     Report.new(user_agent_param, accept_language_param)
   end
+
+  def gem_version
+    Browser::VERSION
+  end
 end
 
 get "/" do
